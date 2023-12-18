@@ -1,0 +1,632 @@
+*{
+    text-decoration: none;
+    border-collapse: collapse;
+    padding: 0px;
+    margin: 0px;
+    color: white;
+}
+
+.body {
+    overflow: auto;
+    padding: 0;
+    margin: 0;
+    background-color: #0a0000;
+}
+@media all and (min-width:480px) and (max-width:767px) {}
+
+.header {
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    width: 430px;
+    height: 280px;
+    background-color: #0a0000;
+    z-index: 1000;
+}
+
+.sidebar {
+    background-color: black;
+    opacity: 90%;
+    width: 430px;
+    height: 100%;
+    position: fixed;
+    z-index: 2000;
+    transform: translateX(-430px);
+    transition: transform 430ms ease-in-out;
+}
+
+.Xibalba {
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-family: Godfrey;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: 0.9px;
+    text-align: left;
+    position: fixed;
+    width: 144px;
+    height: 14px;
+    left: 47px;
+    top: 228px;
+}
+.Tartarus {
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-family: Godfrey;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: 0.9px;
+    text-align: left;
+    position: fixed;
+    width: 144px;
+    height: 14px;
+    left: 47px;
+    top: 304px;
+}
+.Nifleheim {
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-family: Godfrey;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: 0.9px;
+    text-align: left;
+    position: fixed;
+    width: 144px;
+    height: 14px;
+    left: 47px;
+    top: 380px;
+}
+.Yomi {
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-family: Godfrey;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: 0.9px;
+    text-align: left;
+    position: fixed;
+    width: 144px;
+    height: 14px;
+    left: 47px;
+    top: 456px;
+}
+.Diyou {
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-family: Godfrey;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: 0.9px;
+    text-align: left;
+    position: fixed;
+    width: 144px;
+    height: 14px;
+    left: 47px;
+    top: 532px;
+}
+.Hell {
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-family: Godfrey;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: 0.9px;
+    text-align: left;
+    position: fixed;
+    width: 144px;
+    height: 14px;
+    left: 47px;
+    top: 608px;
+}
+.bar-top {
+    background-color: white;
+    width: 100%;
+    height: 1.5px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+}
+.bar-center {
+    background-color: white;
+    width: 100%;
+    height: 1.5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.bar-bottom {
+    background-color: white;
+    width: 12px;
+    height: 1.5px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+}
+
+.toggle-icon {
+    position: absolute;
+    top: 89.2px;
+    left: 47px;
+    width: 12px;
+    height: 12px;
+    z-index: 9999;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.toggle-sidebar {
+    display: none;
+    top: 89.2px;
+    left: 47px;
+}
+input[type="checkbox"]:checked ~.sidebar {
+    transform: translateX(0);
+}
+input[type="checkbox"]:checked ~.toggle-icon >.bar-top {
+    transform: rotate(45deg);
+    opacity: 100%;
+    margin-top: 1px;
+}
+input[type="checkbox"]:checked ~.toggle-icon >.bar-center {
+    opacity: 0;
+}
+input[type="checkbox"]:checked ~.toggle-icon >.bar-bottom {
+    transform: rotate(-45deg);
+    opacity: 100%;
+    margin-top: -3px;
+}
+
+
+
+
+
+#headerText {
+    position: absolute;
+    top: 219px;
+    left: 46px;
+    background-color: none;
+    border: 0;
+    object-fit: contain;
+    width: 175px;
+    height: 58px;
+    font-family: VenusSB-Medium;
+    font-size: 55px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.91;
+    letter-spacing: 2.75px;
+    text-align: left;
+    color: #fff;
+}
+.text-box1-4 {
+    position: absolute;
+    top: 77px;
+    left: 138px;
+    background-color: none;
+    border: 0;
+    object-fit: contain; 
+}
+.text-style1-4 {
+    width: 32px;
+    height: 18px;
+    font-family: Godfrey;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.89;
+    letter-spacing: 0.9px;
+    text-align: right;
+    color: #fff;
+}
+.headerText2 {
+    position: absolute;
+    top: 77px;
+    left: 231px;
+    background-color: none;
+    border: 0;
+    object-fit: contain; 
+    width: 32px;
+    height: 18px;
+    font-family: Godfrey;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.89;
+    letter-spacing: 0.9px;
+    text-align: right;
+    color: #fff;
+}
+.hr1-2 {
+    position: absolute;
+    top: 83.2px;
+    left: 170px;
+    width: 51px;
+    height: 1.5px;
+    margin: 6.3px 5px 10.3px;
+    background-color: #fff;
+}
+.icon {
+    position: absolute;
+    top: 86.2px;
+    left: 365px;
+    width: 0.9rem;
+    height: auto;
+}
+
+
+.section {
+    width: 430px;
+    height:1020px;
+    clear: both;
+    background-color: #0a0000;
+}
+.section1 {
+    background-color: #0a0000;
+    z-index: 1;
+}
+.text-box1-2 {
+    position: absolute;
+    top: 311px;
+    left: 46px;
+    background-color: none;
+    border: 0;
+    object-fit: contain;
+    z-index: 0;
+}
+.text-style1-2 {
+    width: 338px;
+    height: 126px;
+    font-family: AppleSDGothicNeo;
+    font-size: 9.5px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2;
+    letter-spacing: -0.1px;
+    text-align: left;
+    color: #fff;
+    z-index: 0;
+}
+.text-box1-3 {
+    position: absolute;
+    top: 645px;
+    left: 46px;
+    background-color: none;
+    border: 0;
+    object-fit: contain;
+    z-index: 0;
+}
+.text-style1-3 {
+    width: 338px;
+    height: 69px;
+    font-family: AppleSDGothicNeo;
+    font-size: 9.5px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2;
+    letter-spacing: -0.1px;
+    text-align: left;
+    color: #fff;
+    z-index: 0;
+}
+.img1 {
+    position: absolute;
+    top: 461px;
+    left: 47px;
+    width: 336px;
+    height: 160px;
+    object-fit: contain;
+    z-index: 0;
+}
+
+
+.section2 {
+    background-color: #0a0000;
+}
+.text-box2 {
+    position: absolute;
+    top: 1151px;
+    left: 47px;
+    background-color: none;
+    border: 0;
+    object-fit: contain;
+}
+.text-style2 {
+    width: 189px;
+    height: 58px;
+    font-family: VenusSB-Medium;
+    font-size: 55px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.91;
+    letter-spacing: 2.75px;
+    text-align: left;
+    color: #fff;
+}
+.text-box2-2 {
+    position: absolute;
+    top: 1243px;
+    left: 47px;
+    background-color: none;
+    border: 0;
+    object-fit: contain;
+}
+.text-style2-2 {
+    width: 341px;
+    height: 126px;
+    font-family: AppleSDGothicNeo;
+    font-size: 9.5px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2;
+    letter-spacing: -0.1px;
+    text-align: left;
+    color: #fff;
+}
+.text-box2-3 {
+    position: absolute;
+    top: 1577px;
+    left: 47px;
+    background-color: none;
+    border: 0;
+    object-fit: contain;
+}
+.text-style2-3 {
+    width: 340px;
+    height: 69px;
+    font-family: AppleSDGothicNeo;
+    font-size: 9.5px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2;
+    letter-spacing: -0.1px;
+    text-align: left;
+    color: #fff;
+}
+.img2 {
+    position: absolute;
+    top: 1393px;
+    left: 47px;
+    width: 336px;
+    height: 160px;
+}
+
+
+.section3 {
+    background-color: #0a0000;
+}
+.text-box3-2 {
+    position: absolute;
+    top: 2175px;
+    left: 47px;
+    background-color: none;
+    border: 0;
+    object-fit: contain;
+}
+.text-style3-2 {
+    width: 341px;
+    height: 126px;
+    font-family: AppleSDGothicNeo;
+    font-size: 9.5px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2;
+    letter-spacing: -0.1px;
+    text-align: left;
+    color: #fff;
+}
+.text-box3-3 {
+    position: absolute;
+    top: 2509px;
+    left: 47px;
+    background-color: none;
+    border: 0;
+    object-fit: contain;
+}
+.text-style3-3 {
+    width: 340px;
+    height: 69px;
+    font-family: AppleSDGothicNeo;
+    font-size: 9.5px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2;
+    letter-spacing: -0.1px;
+    text-align: left;
+    color: #fff;
+}
+.img3 {
+    position: absolute;
+    top: 2325px;
+    left: 47px;
+    width: 336px;
+    height: 160px;
+}
+
+
+.section4 {
+    background-color: #0a0000;
+}
+.text-box4-2 {
+    position: absolute;
+    top: 3106px;
+    left: 47px;
+    background-color: none;
+    border: 0;
+    object-fit: contain;
+}
+.text-style4-2 {
+    width: 341px;
+    height: 126px;
+    font-family: AppleSDGothicNeo;
+    font-size: 9.5px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2;
+    letter-spacing: -0.1px;
+    text-align: left;
+    color: #fff;
+}
+.text-box4-3 {
+    position: absolute;
+    top: 3441px;
+    left: 47px;
+    background-color: none;
+    border: 0;
+    object-fit: contain;
+}
+.text-style4-3 {
+    width: 340px;
+    height: 69px;
+    font-family: AppleSDGothicNeo;
+    font-size: 9.5px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2;
+    letter-spacing: -0.1px;
+    text-align: left;
+    color: #fff;
+}
+.img4 {
+    position: absolute;
+    top: 3257px;
+    left: 47px;
+    width: 336px;
+    height: 160px;
+}
+
+
+.section5 {
+    background-color: #0a0000;
+}
+.text-box5-2 {
+    position: absolute;
+    top: 4038px;
+    left: 47px;
+    background-color: none;
+    border: 0;
+    object-fit: contain;
+}
+.text-style5-2 {
+    width: 341px;
+    height: 126px;
+    font-family: AppleSDGothicNeo;
+    font-size: 9.5px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2;
+    letter-spacing: -0.1px;
+    text-align: left;
+    color: #fff;
+}
+.text-box5-3 {
+    position: absolute;
+    top: 4373px;
+    left: 47px;
+    background-color: none;
+    border: 0;
+    object-fit: contain;
+}
+.text-style5-3 {
+    width: 340px;
+    height: 69px;
+    font-family: AppleSDGothicNeo;
+    font-size: 9.5px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2;
+    letter-spacing: -0.1px;
+    text-align: left;
+    color: #fff;
+}
+.img5 {
+    position: absolute;
+    top: 4189px;
+    left: 47px;
+    width: 336px;
+    height: 160px;
+}
+
+
+.section6 {
+    background-color: #0a0000;
+}
+.text-box6-2 {
+    position: absolute;
+    top: 4971px;
+    left: 47px;
+    background-color: none;
+    border: 0;
+    object-fit: contain;
+}
+.text-style6-2 {
+    width: 341px;
+    height: 126px;
+    font-family: AppleSDGothicNeo;
+    font-size: 9.5px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2;
+    letter-spacing: -0.1px;
+    text-align: left;
+    color: #fff;
+}
+.text-box6-3 {
+    position: absolute;
+    top: 5305px;
+    left: 47px;
+    background-color: none;
+    border: 0;
+    object-fit: contain;
+}
+.text-style6-3 {
+    width: 340px;
+    height: 69px;
+    font-family: AppleSDGothicNeo;
+    font-size: 9.5px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2;
+    letter-spacing: -0.1px;
+    text-align: left;
+    color: #fff;
+}
+.img6 {
+    position: absolute;
+    top: 5121px;
+    left: 47px;
+    width: 336px;
+    height: 160px;
+}
